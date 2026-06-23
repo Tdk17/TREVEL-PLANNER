@@ -367,7 +367,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#eef2f3] via-[#e4efe9] to-[#d8f1e6]/40 text-slate-800 font-sans selection:bg-blue-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#f4f7f8] text-[#606c71] font-sans selection:bg-[#155799]/15 flex flex-col justify-between">
       
       {/* Toast alert system notifications */}
       <AnimatePresence>
@@ -430,114 +430,123 @@ export default function App() {
                   initial={{ x: "-100%" }}
                   animate={{ x: "0%" }}
                   transition={{ duration: 2, ease: "easeInOut" }}
-                  className="h-full bg-gradient-to-r from-blue-500 to-emerald-400"
+                  className="h-full bg-gradient-to-r from-[#155799] to-[#159957]"
                 />
               </div>
             </motion.div>
           </div>
         )}
 
-        {/* 2. HOME PAGE */}
+        {/* 2. HOME PAGE (JEKYLL CAYMAN THEME) */}
         {currentScreen === "home" && (
-          <div className="relative overflow-hidden py-16 sm:py-24">
-            {/* Background glowing decorations */}
-            <div className="absolute top-20 right-0 w-[450px] h-[450px] bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-10 left-10 w-[350px] h-[350px] bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
-
-            <ResponsiveContainer className="relative z-10 text-center">
+          <div className="relative">
+            {/* Cayman Theme Page Header Banner */}
+            <section className="bg-gradient-to-r from-[#155799] to-[#159957] text-white py-16 sm:py-24 px-6 text-center shadow-lg relative overflow-hidden">
+              {/* Subtle visual grid lines to simulate static pages feel */}
+              <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
               
-              {/* Badge promotion */}
-              <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-slate-700 text-xs font-semibold tracking-wide uppercase mb-6 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
-                <span>Agente de viagens integrado com inteligência artificial</span>
-              </div>
-
-              {/* Big Display Hero Heading */}
-              <h1 className="font-display font-black text-4xl sm:text-6xl text-slate-900 tracking-tight leading-none max-w-4xl mx-auto">
-                Planeje sua viagem dos sonhos com{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500">
-                  Inteligência Artificial
-                </span>
-              </h1>
-
-              {/* Subheading */}
-              <p className="text-base sm:text-xl text-slate-500 font-medium mt-6 max-w-2xl mx-auto leading-relaxed">
-                Descubra quanto precisa juntar, onde ficar, o que visitar e receba todo o roteiro detalhado em PDF no seu e-mail.
-              </p>
-
-              {/* Primary Call to Actions */}
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button
-                  id="btn-start-planning"
-                  onClick={() => setCurrentScreen("wizard")}
-                  className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-600 font-bold text-white shadow-xl shadow-emerald-500/10 transition-all duration-300 transform hover:translate-y-[-2px] flex items-center justify-center space-x-3 text-base"
-                >
-                  <span>Começar Planejamento</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-
-                <button
-                  id="btn-ver-exemplo"
-                  onClick={handleLoadDemo}
-                  className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/40 border border-white/60 hover:border-white/80 font-bold text-slate-800 transition-all duration-300 flex items-center justify-center space-x-2 text-base hover:bg-white/60 backdrop-blur-sm shadow-sm"
-                >
-                  <span>Ver Exemplo Pronto</span>
-                </button>
-              </div>
-
-              {/* Benefits Bento Grid Cards */}
-              <div className="mt-20 border-t border-white/40 pt-16">
-                <div className="text-center mb-10">
-                  <span className="text-xs font-extrabold text-blue-600 uppercase tracking-widest block">Benefícios do SaaS</span>
-                  <h2 className="font-display font-bold text-2xl sm:text-3xl text-slate-800 mt-1">
-                    Funcionalidades Integradas
-                  </h2>
+              <div className="max-w-4xl mx-auto relative z-10">
+                <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight text-white drop-shadow-sm">
+                  Travel Planner AI
+                </h1>
+                <h2 className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-normal leading-relaxed mt-4 mb-8 drop-shadow-sm">
+                  Seu agente inteligente de viagens que gera roteiros personalizados, estimativas de custos e comparações de hospedagem com o visual oficial do tema Jekyll Cayman.
+                </h2>
+                
+                {/* Cayman-style action buttons */}
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <button
+                    id="btn-start-planning"
+                    onClick={() => setCurrentScreen("wizard")}
+                    className="px-5 py-2.5 rounded-lg border border-white/20 bg-white/10 text-white font-semibold text-xs hover:bg-white/20 hover:border-white/40 transition-all shadow-sm cursor-pointer"
+                  >
+                    Começar Planejamento
+                  </button>
+                  <button
+                    id="btn-ver-exemplo"
+                    onClick={handleLoadDemo}
+                    className="px-5 py-2.5 rounded-lg border border-white/10 bg-white/5 text-white/95 font-semibold text-xs hover:bg-white/15 hover:border-white/30 transition-all shadow-sm cursor-pointer"
+                  >
+                    Ver Exemplo Pronto
+                  </button>
+                  <a
+                    href="https://github.com/jasonlong/cayman-theme"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-lg border border-white/10 bg-white/5 text-white/80 font-semibold text-xs hover:bg-white/10 hover:text-white hover:border-white/20 transition-all flex items-center justify-center space-x-1.5"
+                  >
+                    <span>Jekyll Cayman Theme</span>
+                  </a>
                 </div>
+              </div>
+            </section>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            {/* Cayman Theme Main Content Container */}
+            <ResponsiveContainer className="max-w-[1012px] mx-auto px-4 sm:px-8 py-12 space-y-16 relative z-10">
+              
+              {/* Introduction Text Block */}
+              <div className="prose prose-slate max-w-none text-left bg-white border border-slate-200/80 p-8 sm:p-10 rounded-2xl shadow-sm">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#159957] border-b border-slate-200/80 pb-2 flex items-center space-x-2">
+                  <Sparkles className="w-6 h-6 text-[#159957] shrink-0" />
+                  <span>Sobre o Agente Inteligente</span>
+                </h2>
+                <p className="text-sm text-slate-600 leading-relaxed mt-4">
+                  O <strong>Travel Planner AI</strong> é um software de simulação inteligente integrado que ajuda viajantes a automatizarem seu planejamento financeiro e logístico. Com apenas alguns cliques, configure preferências, simule opções de hospedagem, calcule estimativas locais com câmbio e receba um roteiro detalhado completo.
+                </p>
+                <blockquote className="border-l-4 border-[#159957] bg-slate-50 p-4 rounded-r-xl text-xs text-slate-500 italic mt-6">
+                  &ldquo;A inteligência de curadoria do sistema permite simular o custo de vida local histórico de centenas de destinos em poucos segundos, eliminando horas de pesquisa manual.&rdquo;
+                </blockquote>
+              </div>
+
+              {/* Benefits Section styled cleanly with Jekyll Cayman colors */}
+              <div className="space-y-6 text-left">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#159957] border-b border-slate-200/80 pb-2">
+                  Funcionalidades do Sistema
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {[
                     {
                       title: "Roteiro Personalizado",
                       desc: "Dias customizados de ponta a ponta com base nos seus interesses e no ritmo escolhido.",
-                      icon: <Compass className="w-5 h-5 text-blue-600" />,
+                      icon: <Compass className="w-5 h-5 text-[#1e6bb8]" />,
                     },
                     {
                       title: "Estimativa de Custos",
                       desc: "Valores simulados reais para passagens, hotéis, alimentação e gastos diários localizados.",
-                      icon: <Wallet className="w-5 h-5 text-emerald-500" />,
+                      icon: <Wallet className="w-5 h-5 text-[#159957]" />,
                     },
                     {
                       title: "Comparação de Hospedagens",
                       desc: "Quadro comparativo de custos, prós e contras entre Hotéis, Airbnb, Hostels e Resorts.",
-                      icon: <Home className="w-5 h-5 text-rose-500" />,
+                      icon: <Home className="w-5 h-5 text-rose-600" />,
                     },
                     {
                       title: "PDF por E-mail",
                       desc: "Receba o material de planejamento no seu endereço de e-mail formatado em folha A4 oficial.",
-                      icon: <Mail className="w-5 h-5 text-sky-500" />,
+                      icon: <Mail className="w-5 h-5 text-sky-600" />,
                     },
                     {
                       title: "Sem Cadastro Prévio",
                       desc: "Utilize toda a infraestrutura de planejamento sem barreiras, passwords ou formulários demorados.",
-                      icon: <ShieldCheck className="w-5 h-5 text-violet-500" />,
+                      icon: <ShieldCheck className="w-5 h-5 text-violet-600" />,
                     },
                     {
                       title: "Planejamento em Minutos",
                       desc: "Nosso motor de cálculo estruturado e IA organizam dados locais instantaneamente.",
-                      icon: <Sparkles className="w-5 h-5 text-amber-500" />,
+                      icon: <Sparkles className="w-5 h-5 text-amber-600" />,
                     },
                   ].map((card, i) => (
                     <div
                       key={i}
-                      className="p-6 glass-card rounded-2xl hover:bg-white/75 hover:border-white/95 hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300"
+                      className="p-6 bg-white border border-slate-200 hover:border-[#1e6bb8]/40 hover:shadow-md rounded-xl transition-all duration-300"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-white/50 border border-white/60 flex items-center justify-center mb-4 shadow-sm">
+                      <div className="w-10 h-10 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center mb-4">
                         {card.icon}
                       </div>
-                      <h3 className="font-display font-extrabold text-base text-slate-800">
+                      <h3 className="font-display font-bold text-base text-slate-800">
                         {card.title}
                       </h3>
-                      <p className="text-xs text-slate-400 leading-relaxed mt-2">
+                      <p className="text-xs text-slate-500 leading-relaxed mt-2">
                         {card.desc}
                       </p>
                     </div>
@@ -546,58 +555,42 @@ export default function App() {
               </div>
 
               {/* How it works section */}
-              <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-slate-900/95 backdrop-blur-md text-white border border-white/10 text-left relative overflow-hidden shadow-xl shadow-slate-950/15">
-                <div className="absolute right-0 top-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
-                <div className="absolute left-10 bottom-0 w-60 h-60 bg-emerald-400/5 rounded-full blur-3xl" />
-                
-                <div className="relative z-10 max-w-3xl">
-                  <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest">Fluxo do Agente</span>
-                  <h2 className="font-display font-black text-2xl sm:text-4xl mt-1 tracking-tight">
-                    Como funciona o Travel Planner AI?
-                  </h2>
-                  <p className="text-slate-300 text-sm mt-4 leading-relaxed">
-                    Nossa ferramenta realiza análises dinâmicas combinando dados regionais, custos de vida locais históricos, recomendações sazonais e o perfil financeiro estipulado por você para gerar o plano final perfeito.
-                  </p>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-8 text-left space-y-6">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#159957] border-b border-slate-200/80 pb-2">
+                  Como funciona?
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+                  <div className="space-y-2">
+                    <div className="text-xs font-mono font-bold text-[#1e6bb8] bg-[#1e6bb8]/10 px-2.5 py-1 rounded inline-block">
+                      ETAPA 1
+                    </div>
+                    <h4 className="font-display font-bold text-sm text-slate-800">Insira Suas Preferências</h4>
+                    <p className="text-xs text-slate-500 leading-relaxed">Informe datas, estilo de hospedagem, orçamento e interesses favoritos.</p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="text-xs font-mono font-bold text-[#159957] bg-[#159957]/10 px-2.5 py-1 rounded inline-block">
+                      ETAPA 2
+                    </div>
+                    <h4 className="font-display font-bold text-sm text-slate-800">Cálculo e Curadoria</h4>
+                    <p className="text-xs text-slate-500 leading-relaxed">O motor de simulação processa as cotações e monta a planilha financeira ideal.</p>
+                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-                    <div className="flex space-x-3">
-                      <div className="w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center font-bold font-display text-xs border border-white/20 text-emerald-400 flex-shrink-0">
-                        1
-                      </div>
-                      <div>
-                        <h4 className="font-display font-bold text-sm text-white">Insira Suas Preferências</h4>
-                        <p className="text-[11px] text-slate-400 mt-1">Informe datas, estilo de hospedagem, alimentação e interesses favoritos.</p>
-                      </div>
+                  <div className="space-y-2">
+                    <div className="text-xs font-mono font-bold text-[#1e6bb8] bg-[#1e6bb8]/10 px-2.5 py-1 rounded inline-block">
+                      ETAPA 3
                     </div>
-                    
-                    <div className="flex space-x-3">
-                      <div className="w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center font-bold font-display text-xs border border-white/20 text-emerald-400 flex-shrink-0">
-                        2
-                      </div>
-                      <div>
-                        <h4 className="font-display font-bold text-sm text-white">Cálculo e Curadoria IA</h4>
-                        <p className="text-[11px] text-slate-400 mt-1">O motor processa moedas, atrativos turísticos e monta a planilha financeira ideal.</p>
-                      </div>
-                    </div>
-
-                    <div className="flex space-x-3">
-                      <div className="w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center font-bold font-display text-xs border border-white/20 text-emerald-400 flex-shrink-0">
-                        3
-                      </div>
-                      <div>
-                        <h4 className="font-display font-bold text-sm text-white">Receba Tudo em PDF</h4>
-                        <p className="text-[11px] text-slate-400 mt-1">Visualize na tela, baixe ou receba no e-mail um relatório elegante pronto para impressão.</p>
-                      </div>
-                    </div>
+                    <h4 className="font-display font-bold text-sm text-slate-800">Roteiro Completo</h4>
+                    <p className="text-xs text-slate-500 leading-relaxed">Visualize os pontos turísticos, baixe um arquivo ou receba o documento por e-mail.</p>
                   </div>
                 </div>
               </div>
 
               {/* Premium Features banner */}
-              <div className="mt-16 text-center border border-dashed border-white/60 p-6 rounded-2xl bg-white/40 backdrop-blur-sm max-w-xl mx-auto flex items-center justify-center space-x-3">
-                <Sparkles className="w-5 h-5 text-amber-500 flex-shrink-0 animate-bounce" />
-                <span className="text-xs text-slate-600 font-semibold">
-                  <strong>Premium em Breve:</strong> Integração com passagens em tempo real, hotéis parceiros, inteligência artificial avançada e sincronização com Google Agenda.
+              <div className="text-center border border-dashed border-[#159957]/40 p-5 rounded-xl bg-white max-w-xl mx-auto flex items-center justify-center space-x-3 shadow-sm">
+                <Sparkles className="w-5 h-5 text-[#159957] shrink-0" />
+                <span className="text-xs text-slate-500 leading-relaxed">
+                  <strong>Premium em Breve:</strong> Integração com passagens reais, alertas de preço, IA avançada e sincronização do roteiro com o Google Agenda.
                 </span>
               </div>
             </ResponsiveContainer>
@@ -1652,19 +1645,16 @@ export default function App() {
       )}
 
       {/* FOOTER */}
-      <footer className="bg-slate-900 border-t border-slate-800 py-10 text-slate-400 mt-16 text-xs font-medium">
-        <ResponsiveContainer className="text-center space-y-4">
-          <div className="flex items-center justify-center space-x-2">
-            <Compass className="w-4 h-4 text-emerald-500" />
-            <span className="font-display font-bold text-white tracking-tight">Travel Planner AI</span>
-            <span className="text-slate-600">|</span>
-            <span className="text-slate-500 font-normal">SaaS Inteligente de Viagens</span>
-          </div>
-          <p className="max-w-md mx-auto text-slate-500 leading-relaxed font-normal">
-            Descubra quanto precisa juntar, onde ficar, o que visitar e receba tudo em PDF no seu e-mail de forma automatizada e inteligente.
+      <footer className="border-t border-slate-200 bg-white py-12 text-slate-500 mt-16 text-xs text-center relative z-10">
+        <ResponsiveContainer className="max-w-[1012px] mx-auto px-4 sm:px-8 space-y-4">
+          <p className="site-footer-owner">
+            Este site é mantido por <span className="font-semibold text-slate-700">peidinho16@gmail.com</span>. O projeto foi desenvolvido com o tema <a href="https://github.com/jasonlong/cayman-theme" target="_blank" rel="noopener noreferrer" className="text-[#1e6bb8] hover:underline font-bold">Jekyll Cayman</a>.
           </p>
-          <div className="text-[10px] text-slate-600 font-mono">
-            © 2026 Travel Planner AI Studio. Desenvolvido com fins de simulação avançada de IA.
+          <p className="site-footer-credits text-[11px] text-slate-400">
+            Gerado de forma inteligente com <span className="font-semibold text-[#159957]">Travel Planner AI</span> para a melhor experiência de planejamento de viagens.
+          </p>
+          <div className="text-[10px] text-slate-400 font-mono pt-3 border-t border-slate-100">
+            © 2026 Travel Planner AI. Hospedado via GitHub Pages.
           </div>
         </ResponsiveContainer>
       </footer>
