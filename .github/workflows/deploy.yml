@@ -10,14 +10,13 @@ permissions:
 
 jobs:
   build-and-deploy:
-    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install and Build 🔧
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -29,7 +28,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy 🚀
+      - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
