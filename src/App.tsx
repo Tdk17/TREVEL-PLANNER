@@ -75,7 +75,7 @@ export default function App() {
     daysCount: 5,
     peopleCount: 1,
     currency: "BRL (R$)",
-    budget: ,
+    budget: 00 ,
     email: " ", // injected user email for delightful preset
     style: "Custo-benefício", // default selected
     interests: ["Gastronomia", "Cultura local", "Natureza"], // defaults selected
