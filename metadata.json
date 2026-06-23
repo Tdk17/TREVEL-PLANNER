@@ -1,0 +1,6 @@
+{
+  "name": "Travel Planner AI",
+  "description": "An intelligent travel planner agent that generates customized itineraries, cost estimates, and accommodation comparisons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
