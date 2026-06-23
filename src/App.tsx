@@ -70,13 +70,13 @@ export default function App() {
     destination: "",
     departureCity: "",
     originCountry: "Brasil",
-    timeUntilTrip: "3 meses",
+    timeUntilTrip: "",
     estimatedDate: "2026-10-15",
     daysCount: 5,
     peopleCount: 1,
     currency: "BRL (R$)",
-    budget: 5000,
-    email: "peidinho16@gmail.com", // injected user email for delightful preset
+    budget: ,
+    email: " ", // injected user email for delightful preset
     style: "Custo-benefício", // default selected
     interests: ["Gastronomia", "Cultura local", "Natureza"], // defaults selected
     accommodationType: "Hotel",
@@ -450,7 +450,7 @@ export default function App() {
                   Travel Planner AI
                 </h1>
                 <h2 className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-normal leading-relaxed mt-4 mb-8 drop-shadow-sm">
-                  Seu agente inteligente de viagens que gera roteiros personalizados, estimativas de custos e comparações de hospedagem com o visual oficial do tema Jekyll Cayman.
+                  Seu agente inteligente de viagens que gera roteiros personalizados, estimativas de custos e comparações de hospedagempara, Você ficar organizado e aproveitar ao maximo.
                 </h2>
                 
                 {/* Cayman-style action buttons */}
@@ -1648,7 +1648,7 @@ export default function App() {
       <footer className="border-t border-slate-200 bg-white py-12 text-slate-500 mt-16 text-xs text-center relative z-10">
         <ResponsiveContainer className="max-w-[1012px] mx-auto px-4 sm:px-8 space-y-4">
           <p className="site-footer-owner">
-            Este site é mantido por <span className="font-semibold text-slate-700">peidinho16@gmail.com</span>. O projeto foi desenvolvido com o tema <a href="https://github.com/jasonlong/cayman-theme" target="_blank" rel="noopener noreferrer" className="text-[#1e6bb8] hover:underline font-bold">Jekyll Cayman</a>.
+            Este site é mantido por <span className="font-semibold text-slate-700">Pedro Henrique</span>. O projeto foi desenvolvido pela Genesys Sistem.
           </p>
           <p className="site-footer-credits text-[11px] text-slate-400">
             Gerado de forma inteligente com <span className="font-semibold text-[#159957]">Travel Planner AI</span> para a melhor experiência de planejamento de viagens.
